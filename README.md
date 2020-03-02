@@ -80,7 +80,6 @@ by the from_date and gives each row the count number. In the outer SELECT query 
 <img src="https://github.com/marczuka/Pewlett-Hackard-Analysis/blob/master/Images/outcome_2.png">
 
 Counting the rows in this table we get the number of employees eligible for retirement - <b>33,118 employees</b>. 
-So the PH company needs to hire <b>33,118</b> new employees to replace the retiring soon staff.
 
 To obtain the number of retiring employees for each title we use the following query:
 <img src="https://github.com/marczuka/Pewlett-Hackard-Analysis/blob/master/Images/Query_3.png" width="600">
@@ -108,3 +107,24 @@ The outcome analysis files generated using SQL-queries:
 - <b>retire_recent_titles.csv</b> - the worksheet contains employee numbers, first and last names, MOST RECENT job titles, starting dates of the job titles and salaries for all the employees eligible for retirement;
 - <b>retire_emp_by_title.csv</b> - the worksheet contains numbers of retiring employees per each title;
 - <b>mentors.csv</b> - the worksheet contains employee numbers, first and last names, titles, birth dates and employment dates (hire_date and the to_date) for the potential mentors.
+
+## Challenge Assignment Summary
+The Pewlett Hackard company currently has <b>33,118</b> employees eligible for retirement so the company needs to hire the same 
+number of new employees to replace the retiring staff.
+
+The PH company gonna need the following specialists:
+- <b>2,711</b> new Engineers;
+- <b>13,651</b> new Senior Engineers;
+- <b>251</b> new Assistant Engineers;
+- <b>2</b> new Managers;
+- <b>2,022</b> new Staff employees;
+- <b>12,872</b> new Senior Staff employees;
+- <b>1,609</b> new Technique Leaders.
+
+The company currently has <b>1,549</b> employees eligible for the mentorship program. Thus the company currently has
+1 potential mentor per 22 new employees which seems to be a reasonable ratio.
+
+I would recommend to count number of potential mentors for each title to see if the number of possible mentors per job title 
+corresponds with the number of new employees hired for each position. We could also calculate the number of potential mentors
+per each department to see if the number of possible mentors per department corresponds to the number of new employees per 
+department.
