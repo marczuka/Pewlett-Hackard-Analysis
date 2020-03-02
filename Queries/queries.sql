@@ -170,4 +170,5 @@ SELECT emp_no,
 	dept_name 
 INTO sales_develop_info
 FROM dept_info
-WHERE dept_name IN ('Sales', 'Development');
+WHERE dept_name IN ('Sales', 'Development')
+ORDER BY dept_name ASC;
