@@ -152,3 +152,22 @@ FROM current_emp AS ce
 		ON (de.dept_no = d.dept_no)
 WHERE de.to_date = '9999-01-01';
 
+-- Creating a list containing everything in the dept_info table, 
+-- only tailored for the Sales team.
+SELECT emp_no,
+	first_name,
+	last_name,
+	dept_name 
+INTO sales_info
+FROM dept_info
+WHERE dept_name = 'Sales';
+
+-- Creating a list containing everything in the dept_info table, 
+-- tailored for the Sales and Development departments.
+SELECT emp_no,
+	first_name,
+	last_name,
+	dept_name 
+INTO sales_develop_info
+FROM dept_info
+WHERE dept_name IN ('Sales', 'Development');
