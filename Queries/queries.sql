@@ -63,12 +63,15 @@ WHERE de.to_date = '9999-01-01';
 
 SELECT * FROM current_emp;
 
--- Retiring employee count by deptartment number
+-- Retiring employee count by department number
+-- Note: needed to add WHERE to_date = ('9999-01-01') constraint
+-- narrowing to the list of currently working employees
 SELECT COUNT(ce.emp_no), de.dept_no
 INTO retire_emp_by_dept
 FROM current_emp AS ce
-    LEFT JOIN dept_emp AS de
-        ON ce.emp_no = de.emp_no
+	LEFT JOIN dept_emp AS de
+		ON ce.emp_no = de.emp_no
+WHERE de.to_date = ('9999-01-01')	
 GROUP BY de.dept_no
 ORDER BY de.dept_no;
 
