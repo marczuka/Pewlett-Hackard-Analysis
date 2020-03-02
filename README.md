@@ -44,7 +44,7 @@ one salary value for each employee so the relationship is ONE-TO-ONE.
 ## The Postgress Database
 To create the Postgress Database from CSV files we've created the <b><i>Queries/schema.sql</b></i> file.
 
-The <b><i>queries.sql</i></b> file was used to create outcome tables (and the CSV files) with the retirement information.
+The <b><i>Queries/queries.sql</i></b> file was used to create outcome tables (and the CSV files) with the retirement information.
 
 The outcome analysis files generated using SQL-queries:
 - <b>retirement_info.csv</b> - list of employees born between '1952-01-01' and '1955-12-31' and been hired between '1985-01-01' 
@@ -60,7 +60,8 @@ Only two active managers are going to retire soon, the other three were managers
 - <b>sales_develop_info.csv</b> - the same information that is in <b>dept_info.</b> tailored for the Sales and Development departments.
 
 ## The Challenge Assignment
-The <b><i>Challenge.csv</b></i> file contains Postgres SQL queries to obtain the additional information requested by PH managment.
+The <b><i>Queries/Challenge.csv</b></i> file contains Postgres SQL queries to obtain the additional information requested 
+by PH managment.
 
 The following query returns the list of current employees eligible for retirement together with their titles:
 <img src="https://github.com/marczuka/Pewlett-Hackard-Analysis/blob/master/Images/Query_1.png" width="300">
@@ -95,7 +96,7 @@ The following query is used to pick out the potential mentors for the new employ
 To obtain the information about potential mentors we join <b>employees</b> table for the personal information, <b>dept_emp</b> 
 table for the to_date and the <b>titles</b> table for the job titles on the common field emp_no. The candidates need to born 
 between January 01 of 1965 and December 31 of 1965. We also need to narrow the search to the employees currently working at the 
-PH only (i.e. to_date = '9999-01-01'). 
+PH (i.e. to_date = '9999-01-01'). 
 Here is the result:
 
 <img src="https://github.com/marczuka/Pewlett-Hackard-Analysis/blob/master/Images/outcome_4.png">
